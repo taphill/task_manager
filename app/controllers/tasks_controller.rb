@@ -3,11 +3,11 @@ class TasksController < ApplicationController
     @tasks = Task.all
   end
 
-  def new
+  def nelaksjdfkjlaksdjfw
   end
 
   def create
-    task = Task.new ({title: params[:task][:title], description: params[:task][:description]})
+    task = Task.new({ title: params[:task][:title], description: params[:task][:description] })
     task.save
 
     redirect_to '/tasks'
@@ -23,11 +23,11 @@ class TasksController < ApplicationController
 
   def update
     task = Task.find(params[:id])
-    
-    task.update({title: params[:task][:title], description: params[:task][:description]})
+
+    task.update({ title: params[:task][:title], description: params[:task][:description] })
     task.save
 
-    redirect_to '/tasks/#{task.id}'
+    redirect_to "/tasks/#{task.id}"
   end
 
   def destroy
